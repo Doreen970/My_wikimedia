@@ -1,0 +1,1 @@
+This is a django project task for the outreachy internship application. In this task provided by wikimedia I am asked to create a django project with an app and also I am supposed to create views for my models. These are the foundations tasks. Requirements are python and django framework
