@@ -1,0 +1,6 @@
+<!-- a html page that shows a list of all bugs -->
+<ul>
+    {% for bug in bugs %}
+        <li><a href="{% url 'detail' bug.id %}">{{ bug.bug_type }}</a></li>
+    {% endfor %}
+</ul>

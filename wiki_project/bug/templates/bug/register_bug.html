@@ -1,0 +1,6 @@
+<!--a html page that displays a form for the user to fill-->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register Bug</button>
+</form>
