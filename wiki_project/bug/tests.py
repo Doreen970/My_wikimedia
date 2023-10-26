@@ -24,6 +24,11 @@ class BugModelTestCase(TestCase):
     def test_bug_model_bug_type_max_length(self):
         max_length = Bug._meta.get_field('bug_type').max_length
         self.assertEqual(max_length, 100)
+#this test ensures that bug type is among the choices
+    def test_bug_model_type_valid_choices(self):
+        bug = Bug.objects.get(bug_type="Test Bug")
+        valid_choices = [choice[0] for choice in bug._meta.get_field('bug_type').choices]
+        self.assertIn(bug.bug_type, valid_choices)    
 
 #testcases for our views
 class BugViewTestCase(TestCase):
